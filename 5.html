@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>⼩滴课堂vue快速⼊⻔</title>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{phone}}</p>
+        手机号<input v-model="phone"/>
+    </div>
+
+    <script>
+        new Vue({
+            //绑定到哪个元素
+            el:'#app',
+
+            //数据源
+            data:{
+             phone:"000"
+            },
+
+            //自定义方法
+            methods: {
+                
+            },
+        })
+    </script>
+</body>
+</html>

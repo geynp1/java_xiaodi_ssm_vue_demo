@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>⼩滴课堂vue快速⼊⻔</title>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{title}}</p>
+        <button v-on:click="changeTitle">完善标题</button>
+    </div>
+
+    <script>
+        new Vue({
+            //绑定到哪个元素
+            el:'#app',
+
+            //数据源
+            data:{
+                title:"面试专题课程"
+            },
+
+            //自定义方法
+            methods: {
+                changeTitle:function(){
+                    this.title="||小滴课堂 2020年"+ this.title;
+                }
+            },
+        })
+    </script>
+</body>
+</html>

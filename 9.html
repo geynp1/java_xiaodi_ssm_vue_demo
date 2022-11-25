@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>⼩滴课堂vue快速⼊⻔</title>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+      <xd_component message="小滴课堂 https://xdclass.net"></xd_component>
+      <xd_component message="面试专题"></xd_component>
+    </div>
+
+    <script>
+
+    Vue.component('xd_component',{
+        
+        props:{
+            message:{
+                type:String
+            }
+        },
+
+        data:function(){
+            return {
+                count:0
+            }
+        },
+
+        //组件里面的template只能包含一个根节点
+        template:'<div><button v-on:click="count++"> {{message}}  点击{{count}}次 </button></p></div>'
+
+    })        
+
+        new Vue({
+            //绑定到哪个元素
+            el:'#app',
+
+            //数据源
+            data:{
+                age:99,
+            },
+
+            //自定义方法
+            methods: {
+                
+            },
+        })
+    </script>
+</body>
+</html>
